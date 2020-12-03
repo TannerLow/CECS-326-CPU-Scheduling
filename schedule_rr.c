@@ -37,6 +37,7 @@ void schedule(){
                 run(temp->task, temp->task->burst);
                 struct node* del = temp;
                 temp = temp->next;
+                printf("Task %s is now finished\n", del->task->name); 
                 delete(&head, del->task);
             }
         }
